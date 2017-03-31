@@ -19,7 +19,8 @@ public class SimpleMessageStore implements MessageStore {
 
     @Override
     public void dumpAll() {
-        String formatCode = "%-15s %-15s %-15s";
+        System.out.println("** Message Dump Report **\n");
+        String formatCode = "%-15s %-15s %-15 \n";
         System.out.println(String.format(formatCode, "Date", "From", "Message"));
         for (Message msg : messages) {
             System.out.println(msg.toFormattedString(formatCode));
